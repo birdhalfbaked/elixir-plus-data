@@ -8,10 +8,10 @@ Okay this can be pretty fun, let's see how the hell you generate CSVs using elix
 
 ### GOALS
 
-* Be able to create a CSV
+* ~~Be able to create a CSV file~~
 * Generate data in CSVs based on a fixed Schema
 
 ### Bonus Goals
 
 * Be able to generate more random data based on the schema of an example input file
-* Parameterize cli version
+* ~~Parameterize cli version~~ - apparently the experts just downright say "don't do this"
