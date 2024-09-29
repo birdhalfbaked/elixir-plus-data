@@ -21,6 +21,6 @@ defmodule Experiments.MixProject do
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
-    [{:jason, "~> 1.4"}]
+    [{:jason, "~> 1.4"}, {:uuid, "~> 1.1"}]
   end
 end

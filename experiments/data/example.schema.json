@@ -1,0 +1,30 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/example.schema.json",
+    "title": "Example",
+    "description": "Example schema that we might use in some data product",
+    "type": "object",
+    "properties": {
+        "Id": {
+            "description": "The unique identifier for something",
+            "type": "string",
+            "format": "uuid"
+        },
+        "Value": {
+            "description": "Some fake value",
+            "type": "integer"
+        },
+        "Description": {
+            "description": "Some fake description",
+            "type": "string"
+        },
+        "FloatValue": {
+            "description": "Some fake float value",
+            "type": "number"
+        },
+        "Boolean": {
+            "description": "Some fake bool",
+            "type": "boolean"
+        }
+    }
+}

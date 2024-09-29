@@ -26,5 +26,5 @@
 **/tmp/
 
 # Generated data files
-data/generated/*.*
+**/data/generated/*.*
 !.gitkeep
