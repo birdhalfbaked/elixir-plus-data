@@ -13,7 +13,7 @@ defmodule Experiments do
   Creates test CSV files
   """
   def generate_csvs(num) when num > 0 do
-    filenames = Enum.map(0..num, fn n -> "./data/data_#{n}.csv" end)
+    filenames = Enum.map(0..num, fn n -> "./data/generated/data_#{n}.csv" end)
     filenames |> Enum.each(&create_csv_file/1)
   end
 end
