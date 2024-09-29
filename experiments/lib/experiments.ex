@@ -77,4 +77,22 @@ defmodule Experiments do
     Enum.map(0..(num - 1), fn n -> "./data/generated/data_#{n}.csv" end)
     |> Enum.each(fn filename -> create_csv_file_with_data(filename, schemaData) end)
   end
+
+  def async_generate_csvs_from_schema(parent, num, schemaPath) do
+    schemaData =
+      File.read!(schemaPath)
+      |> Jason.decode!([])
+      |> Map.get("properties")
+
+    # generate range of filenames and then create data
+    filename = "./data/generated/data_#{num}.csv"
+    create_csv_file_with_data(filename, schemaData)
+
+    try do
+      send(parent, {:ok, inspect(self())})
+    catch
+      value ->
+        IO.puts("Caught #{inspect(value)}")
+    end
+  end
 end
